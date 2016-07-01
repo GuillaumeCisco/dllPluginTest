@@ -1,8 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {Link} from 'react-router';
-import {RouteTransition} from 'react-router-transition';
 import HelmetTitle from './HelmetTitle';
 
 const App = React.createClass({
