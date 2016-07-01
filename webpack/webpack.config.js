@@ -1,6 +1,6 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import AddAssetHtmlPlugin from './addAssetHtmlPlugin';
+import AddAssetHtmlPlugin from 'add-asset-html-webpack-plugin';
 import loaders from './loaders';
 import resolve from './resolve';
 import {definePlugin} from './plugins';
@@ -46,19 +46,19 @@ export default {
     plugins: [
         definePlugin(),
         new webpack.DllReferencePlugin({
-            context: path.join(__dirname),
+            context: path.join(__dirname, '..'),
             manifest: require('../build/frontend/Babel-manifest.json')
         }),
         new webpack.DllReferencePlugin({
-            context: path.join(__dirname),
+            context: path.join(__dirname, '..'),
             manifest: require('../build/frontend/React-manifest.json')
         }),
         new webpack.DllReferencePlugin({
-            context: path.join(__dirname),
+            context: path.join(__dirname, '..'),
             manifest: require('../build/frontend/Redux-manifest.json')
         }),
         new webpack.DllReferencePlugin({
-            context: path.join(__dirname),
+            context: path.join(__dirname, '..'),
             manifest: require('../build/frontend/App-manifest.json')
         }),
         new HtmlWebpackPlugin(
