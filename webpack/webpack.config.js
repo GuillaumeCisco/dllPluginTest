@@ -64,7 +64,6 @@ export default {
         new HtmlWebpackPlugin(
             {
                 filename: 'index.html',
-                favicon: `${__dirname}/../src/frontend/favicon.ico`,
                 template: `${__dirname}/../src/frontend/index.html`,
                 inject: 'body',
                 hash: true,
