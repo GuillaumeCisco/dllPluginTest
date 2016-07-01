@@ -3,8 +3,6 @@ import webpack from 'webpack';
 
 var DEBUG = process.env.NODE_ENV !== 'production';
 
-console.log(process.env.NODE_ENV, DEBUG);
-
 export function definePlugin() {
     return new webpack.DefinePlugin({
         'process.env':{
