@@ -46,7 +46,6 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        signOut: signOutActions.request,
     }, dispatch);
 }
 
